@@ -1,0 +1,95 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+#banner .banner-wrap {
+	position: absolute;
+	top: 0;
+}
+
+#banner .banner-spacer {
+	height: 200vh;
+}
+
+#banner .sticky-wrap {
+	position: absolute;
+	top: 0;
+	background-color: lightgray;
+	height: 200vh;
+}
+
+/*#banner .backgrounds {
+	height: auto;
+	min-height: calc(100% - 100px);
+}*/
+
+#banner .background {
+	position: -webkit-sticky; 
+	position: sticky;
+	top: 0;
+	border: dotted 4px black;
+	height: 100vh;
+	width: 100vw;
+	background-image: url(https://images.squarespace-cdn.com/content/v1/5aec6d014cde7a359cca8d01/1580442517629-470X8TJEA7V6V7YHUSIT/ke17ZwdGBToddI8pDm48kGDpvalPb1SqHoCn1hwN0Y57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmx-YtV7KdJhhcFMxgH7DNwVWsr4BytTuzU0mdZNjZkC7ehjA8nxqmKGxR1QtMJl5J/noun_Circle_1341829_bought.png);
+	background-size: 100px;
+	z-index: 1;
+}
+
+/* ROYGBIV */
+
+#banner .background0 {
+	background-color: violet;
+}
+
+#banner .background1 {
+	background-color: indigo;
+}
+
+#banner .background2 {
+	background-color: blue;
+}
+
+#banner .background3 {
+	background-color: green;
+}
+
+#banner .background4 {
+	background-color: yellow;
+}
+
+#banner .background5 {
+	background-color: orange;
+}
+
+#banner .background6 {
+	background-color: red;
+}
+
+#banner .spacer.bottom {
+	height: 100vh;
+}
+
+#banner .spacer.top {
+	height: calc(100% - 100px);
+}
+
+#banner .footer {
+	position: -webkit-sticky; 
+	position: sticky; 
+	bottom: 0; 
+	border: dotted 4px red;
+	height: 100px;
+	width: 100vw;
+}
+
+
+main {
+	background-color: white;
+	/*position: absolute;*/
+	/*top: 200vh;*/
+}

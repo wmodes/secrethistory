@@ -1,0 +1,915 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+/*
+ * LAYOUT
+ */
+
+/* prevent overscroll */
+html, body {
+    overscroll-behavior: none;
+    overflow-x: hidden;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+div, section {
+	/*border: dotted 1px red;*/
+	overflow: hidden;
+	position: relative;
+}
+
+.vertical-spacer {
+	height: 10vh;
+}
+
+/*
+ * TYPOGRAPHY
+ */
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1 {
+	/*font-family: 'EB Garamond', serif;*/
+}
+
+/*
+ * MAJOR SECTIONS
+ */
+
+.stop-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
+
+.fullpage {
+	position: relative;
+	height: 100vh;
+}
+
+.shortpage {
+	75vh;
+}
+
+.longpage {
+	height: 200vh;
+}
+
+.hidden {
+	opacity: 0 !important;
+}
+
+.fade-fast {
+	transition: opacity 1s;
+	opacity: 1;
+}
+
+.hidden.fade-fast {
+	transition: opacity 0.5s;
+	opacity: 0 !important;
+}
+
+.fade-med {
+	transition: opacity 2s;
+	opacity: 1;
+}
+
+.hidden.fade-med {
+	transition: opacity 1s;
+	opacity: 0 !important;
+}
+
+.fade-slow {
+	transition: opacity 4s;
+	opacity: 1;
+}
+
+.hidden.fade-slow {
+	transition: opacity 2s;
+	opacity: 0 !important;
+}
+
+/*
+ * BACKGROUND AND FIXED FOOTER
+ */
+
+.backgrounds,
+.footer-backgrounds {
+	position: relative;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 1;
+	transition: opacity 5s;
+
+	/*background: radial-gradient(
+		300% 100% at bottom, 
+		#d7edf0, #d7e8fd, #ada7cb, #c17a5c, #a0947a, #5e7481, #0e1a34 90%, #000000 99%);*/
+
+}
+
+.footer-background {
+	position: fixed;
+	bottom: 0;
+    height: 50px;
+    width: 100%;
+	opacity: 1;
+	transition: opacity 5s;
+}
+
+/*
+	#000000  black
+	#0e1a34  dark indigo
+	#213046  indigo
+	#4e6272  gray-blue
+	#717d7f  warm-gray-blue
+	#8e8b7c  muted-orange-blue
+	#a49177  blue-orange
+	#b38568  muted-orange
+	#bf7b5d  grayed-orange
+	#c7875c  sunrise-orange
+	#cd955b  bright sunrise-orange
+	#dcb374  yellow-orange
+	#f5dfa8  sunrise-yellow
+	#fff5c0  hot yellow
+*/
+
+/* indigo to dark indigo to black (bottom to top) */
+.background0 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #4e6272, #0e1a34 25%, #000000 99.5%);
+}
+.footer-background0:after {
+	background: linear-gradient(
+      transparent, #4e6272 25%);
+}
+
+/* gray-blue to indigo (bottom to top) */
+.background1 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #4e6272, #213046, #0e1a34 98%);
+}
+.footer-background1 {
+	background: linear-gradient(
+      transparent, #4e6272 25%);
+}
+
+/* warm-gray-blue to gray-blue (bottom to top) */
+.background2 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #717d7f, #4e6272, #0e1a34 98%);
+}
+.footer-background2 {
+	background: linear-gradient(
+      transparent, #717d7f 25%);
+}
+
+/* muted-orange-blue to warm-gray-blue (bottom to top) */
+.background3 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #8e8b7c, #717d7f 50%, #0e1a34 99%);
+}
+.footer-background3 {
+	background: linear-gradient(
+      transparent, #8e8b7c 25%);
+}
+
+/* blue-orange to warm-gray-blue (bottom to top) */
+.background4 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #a49177, #717d7f 50%, #213046 98%);
+}
+.footer-background4 {
+	background: linear-gradient(
+      transparent, #a49177 25%);
+}
+
+/* muted-orange to warm-gray-blue (bottom to top) */
+.background5 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #b38568, #717d7f 50%, #213046 98%);
+}
+.footer-background5 {
+	background: linear-gradient(
+      transparent, #b38568 25%);
+}
+
+/* grayed-orange to warm-gray-blue (bottom to top) */
+.background6 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #bf7b5d, #717d7f, #213046 98%);
+}
+.footer-background6 {
+	background: linear-gradient(
+      transparent, #bf7b5d 25%);
+}
+
+/* sunrise-orange to warm-gray-blue (bottom to top) */
+.background7 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #c7875c, #717d7f 75%, #4e6272 98%);
+}
+.footer-background7 {
+	background: linear-gradient(
+      transparent, #c7875c 25%);
+}
+
+/* bright sunrise-orange to warm-gray-blue (bottom to top) */
+.background8 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #cd955b, #717d7f 75%, #4e6272 99%);
+}
+.footer-background8 {
+	background: linear-gradient(
+      transparent, #cd955b 25%);
+}
+
+/* yellow-orange to warm-gray-blue (bottom to top) */
+.background9 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #dcb374, #717d7f 75%, #4e6272 99%);
+}
+.footer-background9 {
+	background: linear-gradient(
+      transparent, #dcb374 25%);
+}
+
+/* sunrise-yellow to warm-gray-blue (bottom to top) */
+.background10 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #f5dfa8, #717d7f 75%, #4e6272 99%);
+}
+.footer-background10 {
+	background: linear-gradient(
+      transparent, #f5dfa8 25%);
+}
+
+/* hot yellow to warm-gray-blue (bottom to top) */
+.background11 {
+	background: radial-gradient(
+      200% 100% at bottom, 
+      #fff5c0, #717d7f);
+}
+.footer-background11 {
+	background: linear-gradient(
+      transparent, #fff5c0 25%);
+}
+
+.backgrounds .stars {
+	position: 				fixed;
+	top: 					0;
+	width:					100vw;
+	height:					100vh;
+	background-repeat: 		no-repeat;
+	background-position: 	center bottom;
+	background-size: 		cover;
+}
+
+.backgrounds .stars1 {
+	background-image: 		url("../img/skyview_sse_knoxville_15jul_intermediate.svg");
+}
+
+.footer.fixed {
+	position: 		fixed;
+	bottom: 		0;
+	width: 			100%;
+	overflow:		hidden;
+}
+
+.footer .silhouette {
+	/*position: fixed;*/
+	bottom: 0;
+    /*left: 50%;*/
+    width: 100%;
+    min-width: 800px;
+    /*transform: translateX(-50%);*/
+}
+
+.footer .down-arrow {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+    left: 50%;
+    opacity: 0.7;
+    transition: opacity 5s;
+}
+
+.footer .down-arrow img {
+	margin: 0 auto;
+}
+
+/*
+ * BANNER
+ */
+
+.banner {
+	position: 				fixed;
+	top: 					0;
+}
+
+.title-wrap {
+	position: fixed;
+	bottom: 15vh;
+    /*transform: translateY(-50%);*/
+    width: 100%;
+}
+
+.banner .title {
+	/*width: 60%;*/
+	/*position: absolute;*/
+	/*margin-top: 50vh;*/
+    /*transform: translateY(-50%);*/
+}
+
+.banner .title .logo-wrap {
+	background-image: url("../img/Secret-History-Titles-Website-Horz.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+	.banner .title .logo-wrap {
+		background-image: url("../img/Secret-History-Titles-Website-Stacked.png");
+	}
+}
+
+.banner .quick-links-spacer {
+	height: 5vh;
+	max-height: 75px;
+}
+
+.banner .quick-links ul {
+	list-style: none;
+    padding-inline-start: 0;
+    /*margin-top: 50vh;*/
+
+}
+
+.banner .quick-links li {
+	width: 100%;
+    max-width: 50vw;
+    min-width: 200px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    float: right;
+    clear: both;
+}
+
+.banner .quick-links li a {
+	color: white;
+	text-decoration: none;
+}
+
+/*
+ * SUB-BANNERS
+ */
+
+.sub-banner {
+ 	position: relative;
+ 	width: 100%;
+ 	height: 100%;
+}
+
+.sub-banner figure {
+ 	position: absolute;
+ 	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 95%;
+	height: 80vh;
+	max-width: 95%;
+	max-height: 80vh;
+ }
+
+.sub-banner figure figcaption,
+.sub-banner figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+ /* Anchor will cover the whole item by default */
+.sub-banner figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+ .sub-banner figure .image {
+    width: 50vw;
+    height: 100%;
+    max-height: 80vh;
+    /*border-radius: 15px;*/
+    object-fit: cover;
+}
+
+.sub-banner figure .image img,
+sub-banner figure .video video {
+	width: 100%;
+}
+
+ .sub-banner figure .video {
+    width: 50vw;
+    height: 100%;
+    max-height: 80vh;
+    /*border*/-radius: 15px;
+    object-fit: cover;
+}
+
+.sub-banner figure .image img {
+	width: 100%;
+}
+
+.sub-banner figcaption .title {
+ 	position: absolute;
+	bottom: 52%;
+	right: 0;
+	/*transform: translateY(-50%);*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 10vw;
+ 	color: white;
+
+ }
+
+.sub-banner .text {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 46%;
+	padding: 10px;
+	/*background-color: rgba(0, 0, 0, 0.1);*/
+	/*box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);*/
+	/*border-radius: 10px;*/
+	transition: opacity 1s;
+	opacity: 0;
+	font-size: 1em;
+	font-weight: 500;
+	/*border-top: solid 2px white;*/
+	/*border-bottom: solid 1px #888;*/
+	/*outline-offset: 10px;*/
+}
+
+.sub-banner p {
+	color: white;
+	font-weight: 300;
+}
+
+.sub-banner p:first-child {
+	padding-top: 20px;
+	border-top: solid 2px white;
+}
+
+.sub-banner p:last-child {
+	padding-bottom: 20px;
+	border-bottom: solid 1px white;
+}
+
+@media only screen and (max-width: 768px) {
+	.sub-banner figure .image {
+    	width: 70vw;
+    }
+	.sub-banner figcaption .title {
+		bottom: 67%;
+	}
+	.sub-banner .text {
+		top: 35%;
+		width: 90%;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		opacity: 1;
+		font-size: 0.8em;
+	}
+}
+
+.sub-banner figure:hover .text {
+	opacity: 1;
+}
+
+/*
+ * CARDS
+ */
+
+/* Card container definitions */
+
+.card-container {
+	position: relative;
+    width: 95%;
+	max-width: 1400px;
+	margin: 0 auto;
+	/*height: 100vh;*/
+	overflow: visible;
+	/* border: solid 1px black; */
+    background-color: rgba(0,0,0,0.25);
+	/*border-radius: 15px;*/
+	margin-bottom: 30px;
+}
+
+.card-container .sub-title {
+    display: block;
+    /*position: absolute;
+    top: -30px;
+    left: 20px;*/
+    margin: 0 20px;
+    /*font-family: 'EB Garamond', serif;*/
+    font-size: 40px;
+    color: white;
+    z-index: 100;
+    /*width: calc(100% - 40px);
+    border-bottom: solid 1px white;*/
+}
+
+.card-wrap {
+	position: relative;
+	list-style: none;
+	text-align: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.card-wrap .card {
+	margin: 0 10px 20px 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.card-wrap .widecard {
+	margin: 0 10px 20px 10px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+/* Small card basic definition */
+
+.card figure {
+	position: relative;
+	/*float: left;*/
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 320px;
+	width: 380px;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+	/*border-radius: 10px;*/
+}
+
+@media only screen and (max-width: 707px) {
+	.card-wrap .card {
+		width: 100%;
+	}
+	.card figure {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+/* Wide card basic definition */
+
+.widecard figure {
+	display: flex;
+	flex-flow:row;
+	flex-wrap: wrap;
+	/*align-items: stretch;*/
+	justify-content: space-between;
+	align-content: space-between;
+	position: relative;
+	height: 100%;
+	padding: 20px;
+	overflow: hidden;
+	/*margin: 10px 1%;*/
+	cursor: pointer;
+	/*border-radius: 10px;*/
+	text-align: center;
+}
+
+.widecard .image,
+.widecard figure figcaption {
+	width: 49%;
+	min-width: 320px;
+	min-height: 320px;
+	/*margin: 15px;*/
+	/*border-radius: 10px;*/
+}
+
+.widecard .image {
+	/*max-height: 320px;*/
+	height: auto;
+}
+
+.widecard figure figcaption {
+	height: auto;
+}
+
+@media only screen and (max-width: 707px) {
+	.widecard .image,
+	.widecard figure figcaption {
+		width: 100%;
+		max-height: 100%;
+	}
+}
+
+/* Shared card definitions */
+
+.card figure img,
+.widecard figure img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	/*max-width: 50%;*/
+	opacity: 0.8;
+	object-fit: cover;
+}
+
+/* broken out from below */
+.card figure figcaption {
+	padding: 1em;
+}
+
+.card figure figcaption,
+.widecard figure figcaption {
+	color: #fff;
+	text-transform: uppercase;
+	/*font-size: 1.25em;*/
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.card figure figcaption::before,
+.card figure figcaption::after,
+.widecard figure figcaption::before,
+.widecard figure figcaption::after {
+	pointer-events: none;
+}
+
+.card figure figcaption,
+.card figure figcaption > a,
+.widecard figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+.card figure figcaption > a,
+.widecard figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.card figure h2,
+.widecard figure h2 {
+	/*word-spacing: -0.15em;*/
+	font-weight: 300;
+}
+
+.card figure h2 span,
+.widecard figure h2 span {
+	font-weight: 800;
+}
+
+.card figure h2,
+.card figure p,
+.widecard figure h2,
+.widecard figure p {
+	margin: 0;
+}
+
+.card figure p,
+.widecard figure p {
+	/*letter-spacing: 1px;*/
+	font-size: 1.5em;
+}
+
+/* 
+ * Individual effects 
+ */
+
+/* Wide Cards */
+
+.widecard figure {
+	background: rgba(47, 50, 56, 0.4);
+}
+
+.widecard figure img {
+	max-width: none;
+	/*height: 400px;*/
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.widecard figure figcaption .text {
+	text-align: left;
+	/*background: rgba(255,255,255,0.9);*/
+	background: rgba(0,0,0,0.4);
+	/*border-radius: 10px;*/
+	color: white;
+	padding: 0.5em;
+	-webkit-transition: opacity 0.4s;
+	transition: opacity 0.8s;
+	opacity: 0.4;
+}
+
+.widecard figure h2 {
+	position: relative;
+	padding: 0.5em 20px;
+	font-size: 1.7em;
+}
+
+.widecard figure p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 20px;
+	/*background: rgba(255,255,255,0.9);*/
+	/*color: #2f3238;*/
+	/*color: white;*/
+	text-transform: none;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.widecard figure:hover img {
+	/*opacity: 0.4;*/
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+.widecard figure:hover .text {
+	opacity: 0.9;
+	/*-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);*/
+	transition: opacity 0.4s;
+}
+
+/* (Modified) Julia Effect for small cards */
+
+figure.effect-julia {
+	background: #2f3238;
+}
+
+figure.effect-julia img {
+	max-width: none;
+	height: 400px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+	text-align: left;
+}
+
+figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+	font-size: 1.7em;
+}
+
+figure.effect-julia p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	/*background: rgba(255,255,255,0.9);*/
+	background: rgba(0,0,0,0.5);
+	/*color: #2f3238;*/
+	color: white;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 1em;
+	/*-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;*/
+	-webkit-transition: opacity 0.8s, -webkit-transform 0.35s;
+	transition: opacity 0.8s, transform 0.35s;
+	/*-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);*/
+	opacity: 0;
+	/*border-radius: 5px;*/
+}
+
+figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.25s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+figure.effect-julia:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+	opacity: 0.8;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*
+ * IMAGE TREATMENT
+ */
+
+img {
+	max-width: 100%;
+}
+
+/*
+ * AUDIO CONTROL
+ */
+
+.audio-button {
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	z-index: 100;
+	width: 20px;
+	height: 20px;
+	opacity: 0.8;
+	transition: opacity 0.1s;
+}
+
+.audio-button img {
+	width: 100%;
+}
+
+.audio-button.muted {
+	opacity: 0.3;
+}
+
+.audio-button:hover {
+	opacity: 0.8;
+	filter: drop-shadow(6px 6px 4px rgba(255, 255, 255, 0.5));
+}

@@ -1,0 +1,42 @@
+<svg id="Gradients" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="6000" viewBox="0 0 1000 6000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="1000" height="6000"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="500" y1="-162.46" x2="500" y2="6174" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="0.03" stop-color="#050912"/>
+      <stop offset="0.1" stop-color="#0e1a34"/>
+      <stop offset="0.19" stop-color="#405264"/>
+      <stop offset="0.25" stop-color="#5e7481"/>
+      <stop offset="0.26" stop-color="#617581"/>
+      <stop offset="0.39" stop-color="#8e8b7c"/>
+      <stop offset="0.45" stop-color="#a0947a"/>
+      <stop offset="0.53" stop-color="#b58366"/>
+      <stop offset="0.6" stop-color="#c17a5c"/>
+      <stop offset="0.64" stop-color="#bc8576"/>
+      <stop offset="0.75" stop-color="#b19db3"/>
+      <stop offset="0.8" stop-color="#ada7cb"/>
+      <stop offset="0.83" stop-color="#b8b8d8"/>
+      <stop offset="0.9" stop-color="#c9d2ec"/>
+      <stop offset="0.96" stop-color="#d3e2f9"/>
+      <stop offset="1" stop-color="#d7e8fd"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-2">
+    <path class="cls-3" d="M1000,6174c-298.14-216.61-701.86-216.61-1000,0V0C298.14-216.61,701.86-216.61,1000,0Z"/>
+  </g>
+</svg>
